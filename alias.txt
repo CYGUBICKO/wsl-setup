@@ -1,0 +1,11 @@
+alias start='cmd.exe /C start'
+hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')            
+export DISPLAY=$hostip:0
+export DISPLAY=localhost:0.0
+alias startgui='sudo -u $USER xfce4-session &'
+alias startterm='terminator &'
+alias open='xdg-open'
+alias update='sudo apt update && sudo apt dist-upgrade'
+alias debintall='sudo dpkg -i'
+alias startgui='sudo -u $USER xfce4-session &'
+alias startterm='terminator &'
