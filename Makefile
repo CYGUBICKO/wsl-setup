@@ -13,7 +13,7 @@ ALIASES = alias.txt
 
 create_alias: $(ALIASES)
 	cat $^ >> ~/.bash_aliases
-	source ~/.bash_aliases
+	bash -c "source ~/.bash_aliases"
 
 linux_config:
 	git clone https://github.com/dushoff/linux_config.git && cd linux_config && cp home/.*vimrc* ~/ && ls ~/.*vimrc*
